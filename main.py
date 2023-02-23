@@ -33,8 +33,37 @@ for item in routines:
 # This is a function that asks for input for the user's routine focus
 def get_routine():
     routine_focus = str(input("What is your focus? Your answer: ")).strip().lower()
-    return routine_focus
-
+    if routine_focus == routines[0]:
+        print(f"Your age is {age}.")
+        print("Your focus is: breakfast.")
+        foc_breakfast()
+    elif routine_focus == routines[1]:
+        print(f"Your age is {age}.")
+        print("Your focus is: eat the frog.")
+        foc_eat_frog()
+    elif routine_focus == routines[2]:
+        print(f"Your age is {age}.")
+        print("Your focus is: reading.")
+        foc_reading()
+    elif routine_focus == routines[3]:
+        print(f"Your age is {age}.")
+        print("Your focus is: sleep.")
+        foc_sleep()
+    elif routine_focus == routines[4]:
+        print(f"Your age is {age}.")
+        print("Your focus is: tidy up.")
+        foc_tidy_up()
+    elif routine_focus == routines[5]:
+        print(f"Your age is {age}.")
+        print("Your focus is: time management.")
+        foc_time_manage()
+    elif routine_focus == routines[6]:
+        print(f"Your age is {age}.")
+        print("Your focus is: work out.")
+        foc_work_out()
+    else:
+        print("Please select a routine from the list.")
+        get_routine()
 
 # This is a function about the routine focus of breakfast
 def foc_breakfast():
@@ -45,21 +74,21 @@ def foc_breakfast():
         print("Did you know that breakfast is often considered the most important meal "
               "of the day? \nBreakfast provides your body and brain with the necessary fuel and nutrients to start the day "
               "off right, \nso make sure to continue eating breakfast every day to increase your productivity!")
-    if 5 >= weekly_num_bf > 0:
+    elif 5 >= weekly_num_bf > 0:
         print(f"That's not too good... You are only eating breakfast {weekly_num_bf} times a week.")
         print(
             f"As a {age} year old teenager, you should try to eat breakfast every day as it is often considered the most "
             "important meal of the day. \nBreakfast provides your body and brain with the necessary fuel and nutrients to "
             "start the day off right, which increases your productivity. \nIf you really really need to skip breakfast, aim "
             "to make up for the nutritional content you missed at breakfast with your lunch and dinner.")
-    if weekly_num_bf == 0:
+    elif weekly_num_bf == 0:
         print("You never eat breakfast?! That's super unhealthy!")
         print(
             f"As a {age} year old teenager, you should try to eat breakfast every day as it is often considered the "
             "most important meal of the day! \nBreakfast provides your body and brain with the necessary fuel and nutrients to "
             "start the day off right. \nMake sure to start eating breakfast tomorrow as skipping breakfast has "
             "many negative effects on your body, which may decrease your productivity.")
-    if weekly_num_bf > 7 or weekly_num_bf < 0:
+    elif weekly_num_bf > 7 or weekly_num_bf < 0:
         print("There are 7 days in a week! Enter a number between 0 and 7.")
         foc_breakfast()
     print(
@@ -67,7 +96,7 @@ def foc_breakfast():
         "fruits, \ngreek yoghurt, whole wheat bread, nuts, or anything else that is high in nutrition. \nTry to plan an"
         "exciting breakfast yourself so that you can look forward to it.")
     # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
     if next == "yes":
         print("Please select another focus from the list at the start.")
         get_routine()
@@ -75,9 +104,8 @@ def foc_breakfast():
         print("Thanks for using this productivity tool!")
         exit()
     else:
-        print("Say either yes or no!")
-        foc_breakfast()
-
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
 
 # This is a function about the routine focus of eat the frog
 def foc_eat_frog():
@@ -101,15 +129,16 @@ def foc_eat_frog():
         "Remember: Although tackling the hardest problems first may be more efficient, it isn't the same for everyone. \n"
         "If you think tackling the easiest ones first is more productive, then do what you think is best for you.")
     # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
     if next == "yes":
         print("Please select another focus from the list at the start.")
         get_routine()
     elif next == "no":
-        get_routine()
+        print("Thanks for using this productivity tool!")
+        exit()
     else:
-        print("Say either yes or no!")
-        foc_eat_frog()
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
 
 
 # This is a function about the routine focus of reading
@@ -141,46 +170,7 @@ def foc_reading():
         "Remember: If you aren't sure what to read or what types of books suit you, make sure to search online for "
         "\ncountless recommendations from fellow readers!")
     # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        exit()
-    else:
-        print("Say either yes or no!")
-        foc_reading()
-
-# This is a function about the routine focus of sleep
-def foc_sleep():
-    # Ask how many hours the user sleeps every day and give advice
-    hours_slept = int(input("Around how many hours do you sleep each day? Your answer: "))
-    if 8 <= hours_slept <= 10:
-        print(f"You must be really healthy! "
-              f"\nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to enable your growth and development."
-              "\nBy getting enough sleep, you can enhance your physical health, mental health, athletic performance, "
-              "\nsocial life, and even your academic performance! That's why sleep is important for productivity.")
-    if 5 <= hours_slept <= 7:
-        print(f"That's not too good... \nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to "
-              "enable your growth and development. \nBy getting enough sleep, you can enhance your physical health, "
-              "mental health, athletic performance, social life, and even your academic performance! \nThat's why "
-              "sleep is crucial if you want to increase your productivity.")
-    if 0 <= hours_slept <= 4:
-        print(f"That's horrendous! \nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to "
-              "enable your growth and development. \nBy getting enough sleep, you can enhance your physical health, "
-              "mental health, athletic performance, social life, and even your academic performance. \nMake sure to"
-              "sleep more if you want to increase your productivity.")
-    if hours_slept > 10:
-        print("It's okay to sleep more than 10 hours occasionally, however, if you do this every day, it may increase"
-              f"\nyour risk of getting illnesses and make you feel lethargic throughout the day. \nAs a {age} year old "
-              "teenager, you should aim for 8-10 hours of sleep in order to maximize productivity.")
-    if 0 > hours_slept or hours_slept > 24:
-        print("There are 24 hours in a day! Enter a number between 0 and 24.")
-        foc_sleep()
-    print("Remember:  It's important to find a healthy balance and aim for the optimal amount of sleep for your body."
-          "\nToo less sleep as well as too much sleep will harm your body!")
-    # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
     if next == "yes":
         print("Please select another focus from the list at the start.")
         get_routine()
@@ -188,8 +178,52 @@ def foc_sleep():
         print("Thanks for using this productivity tool!")
         exit()
     else:
-        print("Say either yes or no!")
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
+
+
+# This is a function about the routine focus of sleep
+def foc_sleep():
+    # Ask how many hours the user sleeps every day and give advice
+    hours_slept = int(input("Around how many hours do you sleep each night? Your answer: "))
+    if 8 <= hours_slept <= 10:
+        print(f"So you sleep {hours_slept} hours every night. You must be really healthy! "
+              f"\nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to enable your growth and development."
+              "\nBy getting enough sleep, you can enhance your physical health, mental health, athletic performance, "
+              "\nsocial life, and even your academic performance! That's why sleep is important for productivity.")
+    elif 5 <= hours_slept <= 7:
+        print(f"You only sleep {hours_slept} hours every night? That's not too good... "
+              f"\nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to enable your growth and "
+              "development. \nBy getting enough sleep, you can enhance your physical health, mental health, "
+              "athletic performance, social life, and even your academic performance! "
+              "\nThat's why sleep is crucial if you want to increase your productivity.")
+    elif 0 <= hours_slept <= 4:
+        print(f"That's horrendous! {hours_slept} hours of sleep is too little!"
+              f"\nFor a {age} year old teenager, 8-10 hours of sleep is a must in order to enable your growth "
+              "and development. \nBy getting enough sleep, you can enhance your physical health, mental health, "
+              "athletic performance, social life, and even your academic performance. \nMake sure to sleep more "
+              "if you want to increase your productivity.")
+    elif hours_slept > 10:
+        print("It's okay to sleep more than 10 hours occasionally, however, if you do this every day, it may increase"
+              f"\nyour risk of getting illnesses and make you feel lethargic throughout the day. \nAs a {age} year old "
+              "teenager, you should aim for 8-10 hours of sleep in order to maximize productivity.")
+    elif 0 > hours_slept or hours_slept > 24:
+        print("There are 24 hours in a day! Enter a number between 0 and 24.")
         foc_sleep()
+    print("Remember:  It's important to find a healthy balance and aim for the optimal amount of sleep for your body."
+          "\nToo less sleep as well as too much sleep will harm your body!")
+    # Ask whether the user would like to continue using the tool
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+    if next == "yes":
+        print("Please select another focus from the list at the start.")
+        get_routine()
+    elif next == "no":
+        print("Thanks for using this productivity tool!")
+        exit()
+    else:
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
+
 
 # This is a function about the routine focus of tidy up
 def foc_tidy_up():
@@ -197,23 +231,25 @@ def foc_tidy_up():
     tidy_up_freq = int(input("How many times do you tidy up your room in one month on average? \n"
                              "For example, decluttering, dusting, wiping, and vacuuming your bedroom. Your answer: "))
     if 50 > tidy_up_freq >= 3:
-        print("Your room must be very clean! \nWhen you vacuum and dust your bedroom regularly, you ensure the air "
-              "is clear of allergens and dust particles. \nWhat's more, it also prevents bacteria and viruses from "
-              "harboring in your home. \nWith clear and fresh air, your sleep will be better and healthier.")
+        print(f"If you tidy your room {tidy_up_freq} times a month, your room must be very clean! "
+              "\nWhen you vacuum and dust your bedroom regularly, you ensure the air is clear of allergens "
+              "and dust particles. \nWhat's more, it also prevents bacteria and viruses from harboring in your home. "
+              "\nWith clear and fresh air, your sleep will be better and healthier, and your productivity will increase.")
     elif 0 <= tidy_up_freq < 3:
         print(
-            "You should clean your room more often. \nWhen you vacuum and dust your bedroom regularly, you ensure the "
-            "air is clear of allergens and dust particles. \nWhat's more, it also prevents bacteria and viruses from "
+            f"You only tidy your room {tidy_up_freq} times a month? You should clean your room more often. "
+            "\nWhen you vacuum and dust your bedroom regularly, you ensure the air is clear of allergens "
+            "and dust particles. \nWhat's more, it also prevents bacteria and viruses from "
             "harboring in your home. \nWith clear and fresh air, your sleep will be better and healthier. "
             "\nIt is advised that you clean your room every week to increase your productivity.")
     elif tidy_up_freq >= 50:
-        print("How many times do you clean your room every day?! It's good to be clean, but that's too much...")
+        print("How many times do you clean your room every day?!?! It's good to be clean, but that's too much...")
     else:
         print("Please enter a positive number.")
         foc_tidy_up()
-    print("Remember, making your bed every morning can help you sleep better at night, so make sure you do that!")
+    print("Remember, making your bed every morning can help you sleep better at night, so make sure you do that, too!")
     # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
     if next == "yes":
         print("Please select another focus from the list at the start.")
         get_routine()
@@ -221,8 +257,9 @@ def foc_tidy_up():
         print("Thanks for using this productivity tool!")
         exit()
     else:
-        print("Say either yes or no!")
-        foc_tidy_up()
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
+
 
 # This is a function about the routine focus of time management
 def foc_time_manage():
@@ -232,7 +269,7 @@ def foc_time_manage():
         print("You must be really organized! \nTimetables can be a useful tool for individuals who want to improve "
               "their time management skills, increase their productivity, and reduce stress levels. "
               "\nMake sure too keep using your timetable!")
-    if timetable == "no":
+    elif timetable == "no":
         print(f"As a {age} year old teenager, it's difficult to be organized without a timetable."
               "\nTimetables can be a useful tool for individuals who want to improve their time management skills, "
               "\nincrease their productivity, and reduce stress levels. "
@@ -241,10 +278,10 @@ def foc_time_manage():
         print("Say either yes or no!")
         foc_time_manage()
     print(
-        "Remember: Make your timetable manageable for yourself and make it look attractive so you will continue following it every day!"
-        "\nIf you want to create or improve your timetable, you can find many templates online.")
+        "Remember: Make your timetable manageable for yourself and make it look attractive so you will continue "
+        "following it every day! \nIf you want to create or improve your timetable, you can find many templates online.")
     # Ask whether the user would like to continue using the tool
-    next = input("Would you like to choose another focus? Your answer: ").strip().lower()
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
     if next == "yes":
         print("Please select another focus from the list at the start.")
         get_routine()
@@ -252,43 +289,43 @@ def foc_time_manage():
         print("Thanks for using this productivity tool!")
         exit()
     else:
-        print("Say either yes or no!")
-        foc_time_manage()
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
+
 
 # This is a function about the routine focus of work out
 def foc_work_out():
     # Ask how long the user exercises every day and give advice
-    work_out_time = int(input("How many minutes do you work out every day on average? Your answer: "))
+    work_out_time = int(input("How many minutes do you work out every week on average? Your answer: "))
+    if 1440 >= work_out_time >= 150:
+        print(f"You must be really fit if you work out around {work_out_time / 7} minutes every day! "
+              "\nOther than the improving your physical health, working out has numerous other benefits, "
+              "like increased energy. \nRegular exercise can increase your energy levels and reduce fatigue, "
+              "making it easier to perform daily tasks, thus increasing your productivity.")
+    elif 50 <= work_out_time < 150:
+        print(f"{work_out_time} minutes of exercise per week isn't ideal unless you are doing high intensity work outs."
+              "\nRegular exercise can increase your energy levels and reduce fatigue, making it easier to perform "
+              "daily tasks, thus increasing your productivity. \nSo make sure you work out more!")
+    elif 0 <= work_out_time < 50:
+        print(f"{work_out_time} minutes of exercise per week is too little! A sedentary lifestyle can cause fatigue "
+              "and reduced energy levels, making it harder to perform daily activities, thus decreasing your "
+              "productivity. \nMake sure to work out more starting now if you want to be more productive!")
+    else:
+        print("There are 1440 minutes in one day. Please enter a number between 0 and 1440.")
+        foc_work_out()
+    print("Reminder: You should also take the type of work out you do into account. For example, "
+          "if you do 5 hours of HIIT every day, then it will do more harm than good to your body. "
+          "\nMaintaining a healthy balance is also important!")
+    # Ask whether the user would like to continue using the tool
+    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+    if next == "yes":
+        print("Please select another focus from the list at the start.")
+        get_routine()
+    elif next == "no":
+        print("Thanks for using this productivity tool!")
+        exit()
+    else:
+        print("Say either yes or no! Restart the tool if you want to choose another focus.")
+        exit()
 
-
-if get_routine() == routines[0]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: breakfast.")
-    foc_breakfast()
-elif get_routine() == routines[1]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: eat the frog.")
-    foc_eat_frog()
-elif get_routine() == routines[2]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: reading.")
-    foc_reading()
-elif get_routine() == routines[3]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: sleep.")
-    foc_sleep()
-elif get_routine() == routines[4]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: tidy up.")
-    foc_tidy_up()
-elif get_routine() == routines[5]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: time management.")
-    foc_time_manage()
-elif get_routine() == routines[6]:
-    print(f"Your age is {age}.")
-    print(f"Your focus is: work out.")
-    foc_work_out()
-else:
-    print("Please select a routine from the list.")
-    get_routine()
+get_routine()
