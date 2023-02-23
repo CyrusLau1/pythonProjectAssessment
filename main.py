@@ -96,16 +96,16 @@ def foc_breakfast():
         "exciting breakfast yourself so that you can look forward to it.")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of eat the frog
 def foc_eat_frog():
@@ -131,17 +131,16 @@ def foc_eat_frog():
         "think is best for you.")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
-
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of reading
 def foc_reading():
@@ -174,17 +173,16 @@ def foc_reading():
         "\ncountless recommendations from fellow readers!")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
-
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of sleep
 def foc_sleep():
@@ -219,17 +217,16 @@ def foc_sleep():
           "\nToo less sleep as well as too much sleep will harm your body!")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
-
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of tidy up
 def foc_tidy_up():
@@ -257,17 +254,16 @@ def foc_tidy_up():
     print("Remember, making your bed every morning can help you sleep better at night, so make sure you do that, too!")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
-
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of time management
 def foc_time_manage():
@@ -292,17 +288,16 @@ def foc_time_manage():
         "online.")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
-
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 # This is a function about the routine focus of work out
 def foc_work_out():
@@ -329,15 +324,15 @@ def foc_work_out():
           "\nMaintaining a healthy balance is also important!")
     print("------------------------------")
     # Ask whether the user would like to continue using the tool
-    next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
-    if next == "yes":
-        print("Please select another focus from the list at the start.")
-        get_routine()
-    elif next == "no":
-        print("Thanks for using this productivity tool!")
-        exit()
-    else:
-        print("Say either yes or no! Restart the tool if you want to choose another focus.")
-        exit()
+    while True:
+        next = str(input("Would you like to choose another focus? Your answer: ")).strip().lower()
+        if next == "yes":
+            print("Please select another focus from the list at the start.")
+            get_routine()
+        elif next == "no":
+            print("Thanks for using this productivity tool!")
+            exit()
+        else:
+            print("Say either yes or no!")
 
 get_routine()
