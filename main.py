@@ -8,18 +8,24 @@ print("Productivity tool! Get better! You are awesome!")
 """What inputs are required from the user? """
 # Ask the user for their age and check whether they are suitable for this tool
 # The variable age will be an integer data type
-age = int(input("Please enter your age. You must be between 12 and 16 to use this tool. Your answer: "))
-if 12 > age >= 0:  # if user is underage
-    print("Sorry, this productivity tool is only suitable for ages 12-16. Come back when you are 12!")
-    exit()
-elif 16 < age <= 123:  # if user is overage
-    print("Sorry, this productivity tool is only suitable for ages 12-16.")
-    exit()
-elif age > 123:  # if user is older than the oldest person
-    print("The oldest person in history was 122 years old. Please enter a valid age!")
-    exit()
-elif age < 0:  # if user enters invalid age
-    print("Please enter a valid age.")
+while True:
+    try:
+        age = int(input("Please enter your age. You must be between 12 and 16 to use this tool. Your answer: "))
+        if 12 <= age <= 16:
+            break
+        if 12 > age >= 0:  # if user is underage
+            print("Sorry, this productivity tool is only suitable for ages 12-16. Come back when you are 12!")
+            exit()
+        elif 16 < age <= 123:  # if user is overage
+            print("Sorry, this productivity tool is only suitable for ages 12-16.")
+            exit()
+        elif age > 123:  # if user is older than the oldest person
+            print("The oldest person in history was 122 years old. Please enter a valid age!")
+            exit()
+        elif age < 0:  # if user enters invalid age
+            print("Please enter a valid age.")
+    except ValueError:
+        print("Please enter a valid whole number!")
 
 # The variable routines wil be a list of options
 routines = ["breakfast", "eat the frog", "reading", "sleep", "tidy up", "time management", "work out"]
@@ -62,6 +68,7 @@ def get_routine():
     else:  # if focus is not in list
         print("Please select a routine from the list.")
         get_routine()
+
 
 # This is a function about the routine focus of breakfast
 def foc_breakfast():
@@ -107,6 +114,7 @@ def foc_breakfast():
         else:
             print("Say either yes or no!")
 
+
 # This is a function about the routine focus of eat the frog
 def foc_eat_frog():
     # Ask whether the user tackles the hardest problems first or easiest ones first and give appropriate advice
@@ -141,6 +149,7 @@ def foc_eat_frog():
             exit()
         else:
             print("Say either yes or no!")
+
 
 # This is a function about the routine focus of reading
 def foc_reading():
@@ -183,6 +192,7 @@ def foc_reading():
             exit()
         else:
             print("Say either yes or no!")
+
 
 # This is a function about the routine focus of sleep
 def foc_sleep():
@@ -228,6 +238,7 @@ def foc_sleep():
         else:
             print("Say either yes or no!")
 
+
 # This is a function about the routine focus of tidy up
 def foc_tidy_up():
     # Ask how often the user tidies up their room and give advice
@@ -265,6 +276,7 @@ def foc_tidy_up():
         else:
             print("Say either yes or no!")
 
+
 # This is a function about the routine focus of time management
 def foc_time_manage():
     # Ask whether the user has a timetable/schedule and give advice
@@ -298,6 +310,7 @@ def foc_time_manage():
             exit()
         else:
             print("Say either yes or no!")
+
 
 # This is a function about the routine focus of work out
 def foc_work_out():
@@ -334,5 +347,6 @@ def foc_work_out():
             exit()
         else:
             print("Say either yes or no!")
+
 
 get_routine()
