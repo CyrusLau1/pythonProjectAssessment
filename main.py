@@ -24,7 +24,7 @@ while True:
             exit()
         elif age < 0:  # if user enters invalid age
             print("Please enter a valid age.")
-    except ValueError:
+    except ValueError:  # if user doesn't enter an integer
         print("Please enter a valid whole number!")
 
 # The variable routines wil be a list of options
@@ -116,7 +116,7 @@ def foc_breakfast():
                     exit()
                 else:
                     print("Say either yes or no!")
-        except ValueError:
+        except ValueError:  # if user doesn't enter an integer
             print("Please enter a valid number.")
 
 
@@ -247,7 +247,7 @@ def foc_sleep():
                     exit()
                 else:
                     print("Say either yes or no!")
-        except ValueError:
+        except ValueError:  # if user doesn't enter a float
             print("Please enter a valid number.")
 
 
@@ -293,7 +293,7 @@ def foc_tidy_up():
                     exit()
                 else:
                     print("Say either yes or no!")
-        except ValueError:
+        except ValueError:  # if user doesn't enter an integer
             print("Please enter a valid number.")
 
 
@@ -334,7 +334,7 @@ def foc_time_manage():
 
 # This is a function about the routine focus of work out
 def foc_work_out():
-    # Ask how long the user exercises every day and give advice
+    # Ask how long the user works out every day and give advice
     while True:
         try:
             workout_time = float(input("How many minutes do you work out every week on average? Your answer: "))
@@ -373,8 +373,9 @@ def foc_work_out():
                     exit()
                 else:
                     print("Say either yes or no!")
-        except ValueError:
+        except ValueError:  # if user doesn't enter a float
             print("Please enter a valid number.")
 
 
+# calls the function
 get_routine()
